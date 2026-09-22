@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 Animations</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	* {
+	    box-sizing: border-box;
+	}
+	/* https://zellwk.com/blog/css-animations/
+    You create a CSS Animation by defining an animation in @keyframes.*/
+		@keyframes redToYellow {
+			from {background-color: red;}
+			to {background-color: yellow;}
+		}
+
+		/*
+		animation-direction values are
+		normal - play forward and resets to start over
+		reverse - plays backwards and resets to end state
+		alternate - reverses direction each cycle, first is forward
+		alternate-reverse - reverses direction each cycle, first is backwards
+		*/
+
+		body {
+		    background-color: red;
+		    animation-name: redToYellow;
+		    animation-duration: 4s;
+		    animation-direction: alternate;
+		    animation-iteration-count: infinite;
+		}
+
+		div {
+			width: 100px;
+	    	height: 100px;
+	    	margin: 15px;
+			border: 1px solid black;
+			position: relative;
+		}
+
+		/* The element to apply the animation to */
+.box1 {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    background-color: yellow;
+    animation-name: redToYellow;
+		animation-direction: alternate-reverse;
+    animation-duration: 5s;
+}
+
+@keyframes colorCycle {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+.box2 {
+    background-color: red;
+    animation-name: colorCycle;
+    animation-duration: 4s;
+    animation-iteration-count: 3; /* infinite */
+}
+/* The animation code */
+@keyframes colorPosCycle {
+    0%   {background-color:purple; left:0; top:0;}
+    25%  {background-color:orange; left:25%; top:0px;}
+    50%  {background-color:blue; left:90%; top:40%;}
+    75%  {background-color:green; left:0; top:80%;}
+    100% {background-color:purple; left:0; top:0px;}
+}
+
+@keyframes size {
+	from{width: 100px; height: 100px; border-color: white;}
+	to{width: 300px; height: 300px; border-color: black;}
+}
+
+/* The element to apply the animation to */
+.box3 {
+    background-color: purple;
+    animation-name: colorPosCycle;
+		animation-direction: normal;
+    animation-duration: 5s;
+}
+.box4 {
+    background-color: purple;
+    animation-name: colorPosCycle;
+		animation-direction: reverse;
+    animation-duration: 5s;
+}
+.box5 {
+    background-color: purple;
+    animation-name: colorPosCycle;
+	animation-direction: alternate;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+.box6 {
+    background-color: purple;
+    animation-name: colorPosCycle;
+	animation-direction: alternate-reverse;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+.box7:hover {
+	animation-name: size;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+/*
+:hover - when the mouse cursor hovers over the element
+:focus - which reacts to user input
+:active - when the element is clicked
+:target - when a different element is clicked
+*/
+	</style>
+</head>
+<body>
+<div class="box1"></div>
+
+<div class="box2"></div>
+
+<div class="box3"></div>
+
+<div class="box4"></div>
+
+<div class="box5"></div>
+
+<div class="box6"></div>
+
+<div class="box7"></div>
+</body>
+</html>

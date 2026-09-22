@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation - Text</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+/* rem is root em */
+.first-text {
+  font-size: 4em;
+  position: absolute;
+  left: 5%;
+  top: 30%;
+	color: #333333;
+}
+
+.second-text {
+  font-size: 3em;
+  position: absolute;
+  top: 10%;
+  color: #999999;
+}
+
+.third-text {
+  transform: rotate(-90deg);/*read vertically*/
+  font-size: 2em;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  color: #A3DDF0;
+	white-space: nowrap;/*no line break*/
+}
+.fourth-text {
+  font-size: 5em;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #F0A3BE;
+}
+
+.fifth-text {
+  font-size: 6em;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  color: #F0EBA3;
+}
+	</style>
+</head>
+<body>
+	<div class="first-text">This is an example text</div>
+  <div class="second-text">This is another example text</div>
+  <div class="third-text">This is an example of vertical text</div>
+  <div class="fourth-text">I will not move, just fade</div>
+  <div class="fifth-text">Final text, now I am done</div>
+</body>
+</html>
